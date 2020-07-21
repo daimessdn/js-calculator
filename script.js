@@ -83,3 +83,18 @@ const calculate = () => {
   currentNumber = result;
   calculationOperator = "";
 }
+
+const allClear = document.querySelector(".all-clear");
+
+allClear.addEventListener("click", () => {
+  // console.log("equal button is pressed");
+
+  clearAll();
+  updateScreen(currentNumber);
+});
+
+const clearAll = () => {
+  prevNumber = "";
+  calculationOperator = "";
+  currentNumber = "0";
+}
