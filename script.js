@@ -5,7 +5,16 @@ const numbers = document.querySelectorAll(".number");
 numbers.forEach((number) => {
 	// console.log(number);
 
-	number.addEventListener("click", () => {
-		console.log("number is pressed");
+	number.addEventListener("click", (event) => {
+		// console.log("number is pressed");
+
+		// console.log(event.target.value);
+		updateScreen(event.target.value);
 	})
 })
+
+const calculatorScreen = document.querySelector(".calculator-screen");
+
+const updateScreen = (number) => {
+	calculatorScreen.value = number;
+}
