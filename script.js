@@ -65,16 +65,16 @@ const calculate = () => {
 
   switch(calculationOperator) {
     case "+":
-      result = parseInt(prevNumber) + parseInt(currentNumber);
+      result = parseFloat(prevNumber) + parseFloat(currentNumber);
       break;
     case "-":
-      result = parseInt(prevNumber) - parseInt(currentNumber);
+      result = parseFloat(prevNumber) - parseFloat(currentNumber);
       break;
     case "*":
-      result = parseInt(prevNumber) * parseInt(currentNumber);
+      result = parseFloat(prevNumber) * parseFloat(currentNumber);
       break;
     case "/":
-      result = parseInt(prevNumber) / parseInt(currentNumber);
+      result = parseFloat(prevNumber) / parseFloat(currentNumber);
       break;
     default:
       return;
@@ -97,4 +97,19 @@ const clearAll = () => {
   prevNumber = "";
   calculationOperator = "";
   currentNumber = "0";
-}
+};
+
+const decimal = document.querySelector(".decimal");
+
+decimal.addEventListener("click", () => {
+  // console.log("equal button is pressed");
+
+  inputDecimal(event.target.value);
+  updateScreen(currentNumber);
+});
+
+const inputDecimal = (dot) => {
+  if (!currentNumber.includes(".")) {
+    currentNumber += dot;
+  }
+};
