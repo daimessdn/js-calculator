@@ -39,6 +39,47 @@ const operators = document.querySelectorAll(".operator");
 
 operators.forEach((operator) => {
   operator.addEventListener("click", (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
+
+    inputOperator(event.target.value);
   })
 });
+
+const inputOperator = (operator) => {
+  prevNumber = currentNumber;
+  calculationOperator = operator;
+  currentNumber = "";
+};
+
+const equalSign = document.querySelector(".equal-sign");
+
+equalSign.addEventListener("click", () => {
+  // console.log("equal button is pressed");
+
+  calculate();
+  updateScreen(currentNumber);
+});
+
+const calculate = () => {
+  let result = "";
+
+  switch(calculationOperator) {
+    case "+":
+      result = parseInt(prevNumber) + parseInt(currentNumber);
+      break;
+    case "-":
+      result = parseInt(prevNumber) - parseInt(currentNumber);
+      break;
+    case "*":
+      result = parseInt(prevNumber) * parseInt(currentNumber);
+      break;
+    case "/":
+      result = parseInt(prevNumber) / parseInt(currentNumber);
+      break;
+    default:
+      return;
+  }
+
+  currentNumber = result;
+  calculationOperator = "";
+}
