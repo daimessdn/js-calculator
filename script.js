@@ -46,8 +46,11 @@ operators.forEach((operator) => {
 });
 
 const inputOperator = (operator) => {
+  if (calculationOperator === "") {
+    calculationOperator = operator;
+  }
+  
   prevNumber = currentNumber;
-  calculationOperator = operator;
   currentNumber = "";
 };
 
