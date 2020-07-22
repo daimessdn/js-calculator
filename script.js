@@ -29,9 +29,10 @@ numbers.forEach((number) => {
       updateScreen(currentNumber);
     }
   })
-})
+});
 
 const calculatorScreen = document.querySelector(".calculator-screen");
+let calculatorMessage = document.querySelector(".calculator-message");
 
 const updateScreen = (number) => {
   calculatorScreen.value = number;
@@ -45,6 +46,7 @@ operators.forEach((operator) => {
     // console.log(event.target.value);
     if (calculatorOn) {
       inputOperator(event.target.value);
+      calculatorMessage.innerHTML = `OPERATOR ASSIGNED: "${event.target.value}"`;
     }
   })
 });
@@ -89,6 +91,9 @@ const calculate = () => {
   }
 
   currentNumber = result;
+  calculatorMessage.innerHTML = `
+    <i class="fa fa-signal"></i> 4G <i class="fa fa-battery-full"></i>
+  `;
   calculationOperator = "";
 }
 
@@ -132,9 +137,11 @@ powerButton.addEventListener("click", () => {
   if (calculatorOn) {
     calculatorOn = false;
     currentNumber = "";
+    calculatorMessage.style.color = "#252525";
   } else {
     calculatorOn = true;
     currentNumber = "0"
+    calculatorMessage.style.color = "white";
   }
 
   updateScreen(currentNumber);
