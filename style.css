@@ -10,6 +10,7 @@ body, html {
 	border-radius: 7px;
 	background-color: #808080;
 	box-shadow: 0 15px darkgray, 0 16px #000;
+	border: 1px solid black;
 }
 
 .calculator-screen {
