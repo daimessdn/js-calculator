@@ -6,6 +6,7 @@ const numbers = document.querySelectorAll(".number");
 let prevNumber = "";
 let calculationOperator = "";
 let currentNumber = "0";
+let calculatorOn = false;
 
 const inputNumber = (number) => {
   if (currentNumber === "0") {
@@ -49,7 +50,7 @@ const inputOperator = (operator) => {
   if (calculationOperator === "") {
     calculationOperator = operator;
   }
-  
+
   prevNumber = currentNumber;
   currentNumber = "";
 };
@@ -116,3 +117,19 @@ const inputDecimal = (dot) => {
     currentNumber += dot;
   }
 };
+
+const powerButton = document.querySelector(".power-btn");
+
+powerButton.addEventListener("click", () => {
+  console.log("power button is pressed");
+
+  if (calculatorOn) {
+    calculatorOn = false;
+    currentNumber = "";
+  } else {
+    calculatorOn = true;
+    currentNumber = "0"
+  }
+  
+  updateScreen(currentNumber);
+});
