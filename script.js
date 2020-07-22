@@ -24,8 +24,10 @@ numbers.forEach((number) => {
     // console.log("number is pressed");
 
     // console.log(event.target.value);
-    inputNumber(event.target.value);
-    updateScreen(currentNumber);
+    if (calculatorOn) {
+      inputNumber(event.target.value);
+      updateScreen(currentNumber);
+    }
   })
 })
 
@@ -41,8 +43,9 @@ const operators = document.querySelectorAll(".operator");
 operators.forEach((operator) => {
   operator.addEventListener("click", (event) => {
     // console.log(event.target.value);
-
-    inputOperator(event.target.value);
+    if (calculatorOn) {
+      inputOperator(event.target.value);
+    }
   })
 });
 
@@ -59,9 +62,10 @@ const equalSign = document.querySelector(".equal-sign");
 
 equalSign.addEventListener("click", () => {
   // console.log("equal button is pressed");
-
-  calculate();
-  updateScreen(currentNumber);
+  if (calculatorOn) {
+    calculate();
+    updateScreen(currentNumber);
+  }
 });
 
 const calculate = () => {
@@ -92,9 +96,10 @@ const allClear = document.querySelector(".all-clear");
 
 allClear.addEventListener("click", () => {
   // console.log("equal button is pressed");
-
-  clearAll();
-  updateScreen(currentNumber);
+  if (calculatorOn) {
+    clearAll();
+    updateScreen(currentNumber);
+  }
 });
 
 const clearAll = () => {
@@ -107,9 +112,10 @@ const decimal = document.querySelector(".decimal");
 
 decimal.addEventListener("click", () => {
   // console.log("equal button is pressed");
-
-  inputDecimal(event.target.value);
-  updateScreen(currentNumber);
+  if (calculatorOn) {
+    inputDecimal(event.target.value);
+    updateScreen(currentNumber);
+  }
 });
 
 const inputDecimal = (dot) => {
@@ -130,6 +136,6 @@ powerButton.addEventListener("click", () => {
     calculatorOn = true;
     currentNumber = "0"
   }
-  
+
   updateScreen(currentNumber);
 });
