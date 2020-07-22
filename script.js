@@ -104,6 +104,9 @@ allClear.addEventListener("click", () => {
   if (calculatorOn) {
     clearAll();
     updateScreen(currentNumber);
+    calculatorMessage.innerHTML = `
+      <i class="fa fa-signal"></i> 4G <i class="fa fa-battery-full"></i>
+    `;
   }
 });
 
@@ -128,6 +131,17 @@ const inputDecimal = (dot) => {
     currentNumber += dot;
   }
 };
+
+const percentage = document.querySelector(".percentage");
+
+percentage.addEventListener("click", () => {
+  if (calculatorOn) {
+    // console.log(currentNumber / 100);
+
+    currentNumber /= 100;
+    updateScreen(currentNumber);
+  }
+})
 
 const powerButton = document.querySelector(".power-btn");
 
