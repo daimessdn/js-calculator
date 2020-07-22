@@ -139,3 +139,34 @@ powerButton.addEventListener("click", () => {
 
   updateScreen(currentNumber);
 });
+
+document.addEventListener("keydown", function(event) {
+  numbers.forEach((number) => {
+    // console.log(number);
+    if (event.key == number.value) {
+      number.click();
+    }
+  })
+
+  operators.forEach((operator) => {
+    if (event.key == operator.value) {
+      operator.click();
+    }
+  });
+
+  if (event.key == ".") {
+    decimal.click();
+  }
+
+  if (event.key == "Enter") {
+    equalSign.click();
+  }
+
+  if (event.key == "p") {
+    powerButton.click();
+  }
+
+  if (event.key == "Escape") {
+    allClear.click();
+  }
+});
