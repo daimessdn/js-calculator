@@ -10,3 +10,15 @@ In this project, we made some simple calculator that perform simple calculation.
 - Operator assignments is indicated by the message above the number ("OPERATOR ASSIGNED '\*'" for example). Click the operator once you have enter the first number. Once you have calculate using equal sign, the message will return to normal interface along with the result appeared on the screen.
 
 ![operator assignments](src/out2.gif)
+
+- Want to clear your calculation? Just press **AC** button once and it will be cleared.
+
+![all clear](src/out3.gif)
+
+- Percentage will be resulted number you inputed per one hundred.
+
+![percentage](src/out4.gif)
+
+- Lazy to click them one by one? Just use keyboard for the same thing you use calculator by clicking. There are some keyboard operations shorthands below:
+	- <kbd>P</kbd> (without shift) for turning on/off the calculator
+	- input numbers (<kbd>0</kbd>, <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>, <kbd>4</kbd>, <kbd>5</kbd>, <kbd>6</kbd>, <kbd>7</kbd>, <kbd>8</kbd>, <kbd>9</kbd>)
