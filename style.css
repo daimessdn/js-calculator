@@ -35,12 +35,20 @@ button, input {
 
 button {
 	height: 80px;
+	border-radius: 10px;
+	margin: 10px 5px;
 	background-color: gray;
 	border: 1px solid black;
 	font-size: 32px;
 	color: #fff;
 	width: 25%;
 	outline: none;
+	box-shadow: 0 7px darkgray, 0 8px black;
+}
+
+button:active {
+	margin-bottom: 0;
+	box-shadow: none;
 }
 
 .zero-btn {
@@ -49,6 +57,7 @@ button {
 
 .operator, .equal-sign {
 	background-color: orange;
+	box-shadow: 0 7px darkorange, 0 8px black;
 }
 
 button:hover {
