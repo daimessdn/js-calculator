@@ -161,6 +161,20 @@ powerButton.addEventListener("click", () => {
   updateScreen(currentNumber);
 });
 
+const del = document.querySelector(".delete");
+
+del.addEventListener("click", () => {
+  if (calculatorOn) {
+    if (currentNumber !== "0" || currentNumber.length !== 0) {
+      currentNumber = currentNumber.slice(0, currentNumber.length - 1);
+    } else {
+      currentNumber = "0";
+    }
+
+    updateScreen(currentNumber);
+  }
+});
+
 document.addEventListener("keydown", function(event) {
   numbers.forEach((number) => {
     // console.log(number);
