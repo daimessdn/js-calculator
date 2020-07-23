@@ -77,6 +77,6 @@ button:hover {
 	background-color: darkgray;
 }
 
-.operator:hover, .equal-sign:hover {
+.operator:hover, .equal-sign:hover, .delete:hover {
 	background-color: darkorange;
 }
