@@ -165,7 +165,8 @@ const del = document.querySelector(".delete");
 
 del.addEventListener("click", () => {
   if (calculatorOn) {
-    if (currentNumber !== "0" || currentNumber.length !== 0) {
+    console.log(currentNumber.length);
+    if (currentNumber !== "0" && currentNumber.length !== 1) {
       currentNumber = currentNumber.slice(0, currentNumber.length - 1);
     } else {
       currentNumber = "0";
@@ -203,6 +204,10 @@ document.addEventListener("keydown", function(event) {
 
   if (event.key == "Escape") {
     allClear.click();
+  }
+
+  if (event.key == "Backspace") {
+    del.click();
   }
 
   if (event.key == "%") {
