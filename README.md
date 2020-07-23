@@ -26,3 +26,4 @@ In this project, we made some simple calculator that perform simple calculation.
 	- Percentage (<kbd>%</kbd> (using <kbd>Shift</kbd> + <kbd>5</kbd> together to make <kbd>%</kbd>))
 	- Equal sign (<kbd>Enter</kbd> or <kbd>Return</kbd>)
 	- AC button (<kbd>Esc</kbd> or <kbd>Escape</kbd>)
+	- Delete button (<kbd>Backspace</kbd>)
