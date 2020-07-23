@@ -19,6 +19,10 @@ In this project, we made some simple calculator that perform simple calculation.
 
 ![percentage](src/out4.gif)
 
+- Type your number wrong but don't want to clear them all? Press backspace button (appeared as "left arrow" button)
+![delete](src/out5.gif)
+
+
 - Lazy to click them one by one? Just use keyboard as the same thing you used calculator by clicking. There are some keyboard operations shorthands below:
 	- <kbd>P</kbd> (without shift) for turning on/off the calculator
 	- Input numbers (<kbd>0</kbd>, <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>, <kbd>4</kbd>, <kbd>5</kbd>, <kbd>6</kbd>, <kbd>7</kbd>, <kbd>8</kbd>, <kbd>9</kbd>, <kbd>.</kbd> (for decimal assignment))
