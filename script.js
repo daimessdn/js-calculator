@@ -7,10 +7,12 @@ let prevNumber = "";
 let calculationOperator = "";
 let currentNumber = "0";
 let calculatorOn = false;
+let calculated = false;
 
 const inputNumber = (number) => {
-  if (currentNumber === "0") {
+  if (currentNumber === "0" || calculated === true) {
     currentNumber = number;
+    calculated = false;
   }
   else {
     currentNumber += number;
@@ -91,6 +93,7 @@ const calculate = () => {
   }
 
   currentNumber = result;
+  calculated = true;
   calculatorMessage.innerHTML = `
     <i class="fa fa-signal"></i> 4G <i class="fa fa-battery-full"></i>
   `;
