@@ -19,7 +19,7 @@ In this project, we made some simple calculator that perform simple calculation.
 
 ![percentage](src/out4.gif)
 
-- Lazy to click them one by one? Just use keyboard for the same thing you use calculator by clicking. There are some keyboard operations shorthands below:
+- Lazy to click them one by one? Just use keyboard as the same thing you used calculator by clicking. There are some keyboard operations shorthands below:
 	- <kbd>P</kbd> (without shift) for turning on/off the calculator
 	- Input numbers (<kbd>0</kbd>, <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>, <kbd>4</kbd>, <kbd>5</kbd>, <kbd>6</kbd>, <kbd>7</kbd>, <kbd>8</kbd>, <kbd>9</kbd>, <kbd>.</kbd> (for decimal assignment))
 	- Operator assignments (<kbd>+</kbd> for sum, <kbd>-</kbd> for subtract, <kbd>\*</kbd> for multiply, and <kbd>/</kbd> for divide)
