@@ -20,6 +20,7 @@ In this project, we made some simple calculator that perform simple calculation.
 ![percentage](src/out4.gif)
 
 - Type your number wrong but don't want to clear them all? Press backspace button (appeared as "left arrow" button)
+
 ![delete](src/out5.gif)
 
 
