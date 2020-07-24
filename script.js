@@ -169,7 +169,7 @@ const del = document.querySelector(".delete");
 del.addEventListener("click", () => {
   if (calculatorOn) {
     console.log(currentNumber.length);
-    if (currentNumber !== "0" && currentNumber.length !== 1) {
+    if (currentNumber !== "0" && currentNumber.length !== 1 && calculated === false) {
       currentNumber = currentNumber.slice(0, currentNumber.length - 1);
     } else {
       currentNumber = "0";
